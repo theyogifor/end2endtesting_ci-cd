@@ -12,7 +12,7 @@ app.post('/sum', (req,res)=>{
     const parsedResponse = sumInput.safeParse(req.body)
       if (!parsedResponse.success) {
         return res.status(411).json({
-            message: "Incorrect  inputss, give another try"
+            message: "Incorrect  inputs"
         })
     }
     const answer = parsedResponse.data.a + parsedResponse.data.b
@@ -34,7 +34,7 @@ app.get("/sum", (req, res) => {
         })
     }
 
-    const answer = parsedResponse.data.a - parsedResponse.data.b;
+    const answer = parsedResponse.data.a + parsedResponse.data.b;
 
     res.json({
         answer
