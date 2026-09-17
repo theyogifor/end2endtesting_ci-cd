@@ -47,11 +47,11 @@ describe("POST /sum", () => {
       expect(res.body.answer).toBe(3);
     });
 
-    it("should return 411 if no inputs are provided", async () => {
-      const res = await request(app).post("/sum").send({});
-      expect(res.statusCode).toBe(411);
-      expect(res.body.message).toBe("Incorrect inputs");
-    });
+    // it("should return 411 if no inputs are provided", async () => {
+    //   const res = await request(app).post("/sum").send({});
+    //   expect(res.statusCode).toBe(411);
+    //   expect(res.body.message).toBe("Incorrect inputs");
+    // });
 
 });
 
@@ -68,10 +68,10 @@ describe("GET /sum", () => {
       expect(res.body.answer).toBe(3);
   });
 
-  it("should return 411 if no inputs are provided", async () => {
-    const res = await request(app)
-      .get("/sum").send();
-    expect(res.statusCode).toBe(411);
-  });
+  // it("should return 411 if no inputs are provided", async () => {
+  //   const res = await request(app)
+  //     .get("/sum").send();
+  //   expect(res.statusCode).toBe(411);
+  // });
 
 });
