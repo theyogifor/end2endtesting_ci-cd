@@ -15,7 +15,7 @@ app.post('/sum', (req,res)=>{
             message: "Incorrect  input, give another try"
         })
     }
-    const answer = parsedResponse.data.a + parsedResponse.data.b
+    const answer = parsedResponse.data.a - parsedResponse.data.b
 
 	res.json({
 		answer,
