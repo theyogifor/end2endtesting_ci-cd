@@ -34,7 +34,7 @@ app.get("/sum", (req, res) => {
         })
     }
 
-    const answer = parsedResponse.data.a + parsedResponse.data.b;
+    const answer = parsedResponse.data.a - parsedResponse.data.b;
 
     res.json({
         answer
